@@ -1,0 +1,141 @@
+<div class="container">
+	<div class="content-sec">
+		<div id="navbar-example" class="navbar navbar-static">
+              <div class="navbar-inner">
+                <div class="container" style="width: auto;">
+                  <ul class="nav" role="navigation">
+                    <li class="dropdown">
+                      <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Druid Clinic <b class="caret"></b></a>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://google.com">Druid</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#anotherAction">Eastern</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Both</a></li>
+                      </ul>
+                    </li>
+
+                  </ul>
+                  <ul class="nav pull-right">
+                    <li>
+                    	<%= link_to "Analytics", analytics_path, class: "", style: "font-weight: bold", role: "button" %>
+                    </li>
+                    <li>
+                      <%= link_to "Labs", labs_path, class: "",  role: "button" %>
+                    </li>
+                    <li>
+                      <%= link_to "Settings", settings_path, class: "",  role: "button" %>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+         </div> <!-- /navbar-example -->
+         <div class="navbar navbar-static">
+         	<p><i class="icon-print pull-right"></i></p>
+         </div>
+         <div class="navbar navbar-static">
+         <div class="span4">
+            From:   
+         	<select class="span2">
+            <option>Month</option>
+            <option>Jan</option>
+            <option>Feb</option>
+            <option>Mar</option>
+            <option>Apr</option>
+            <option>May</option>
+            <option>Jun</option>
+            <option>Jul</option>
+            <option>Aug</option>
+            <option>Sep</option>
+            <option>Oct</option>
+            <option>Nov</option>
+            <option>Dec</option>
+          </select>
+          <select class="span1">
+            <option>Year</option>
+            <option>2013</option>
+            <option>2012</option>
+          </select>
+        </div>
+        <div class="span4">
+            To:
+          <select class="span2">
+            <option>Month</option>
+            <option>Jan</option>
+            <option>Feb</option>
+            <option>Mar</option>
+            <option>Apr</option>
+            <option>May</option>
+            <option>Jun</option>
+            <option>Jul</option>
+            <option>Aug</option>
+            <option>Sep</option>
+            <option>Oct</option>
+            <option>Nov</option>
+            <option>Dec</option>
+          </select>
+          <select class="span1">
+            <option>Year</option>
+            <option>2013</option>
+            <option>2012</option>
+          </select>
+         </div>
+         <div>
+          <select class="span1">
+            <option>STD</option>
+            <option>CT: Chlamydia</option>
+            <option>GC: Gonorrhea</option>
+            <option>TV: Trich</option>
+            <option>Syphilis</option>
+            <option>HIV</option>
+            <option>All</option>
+          </select>
+         </div>
+         </div>
+         <div class="analytics_content span11">
+         	<div class="analytics_item span3">
+         		<h1>Positive tests</h1>
+         		<div id="pie_positives_div" class="chart"></div>
+         		<a class="btn">View cases that need to be assigned</a>
+         	</div>
+         	<div class="analytics_item span3">
+         		<h1>Negative tests</h1>
+         		<div id="pie_negatives_div" class="chart"></div>
+         	</div>
+         	<div class="analytics_item span3">
+         		<h1>Test results viewed</h1>
+         		<div id="line_test_views_div" class="chart"></div>
+         	</div>
+         	<div class="analytics_item span3">
+         		<h1>Overview</h1>
+         		<p>Total Positive Tests: <a href="" class="pull-right">103</a></p>
+         		<p>Total Negative Tests: <a href="" class="pull-right">1025</a></p>
+         		<p>Total Pending Tests: <a href="" class="pull-right">12</a></p>
+            <p>Percent of Positives Delivered: <a href="" class="pull-right">98%</a></p>
+         	</div>
+         	<div class="analytics_item span3">
+         		<h1>Chlamydia incidence</h1>
+         		<div id="line_chlamydia_gender_div" class="chart"></div>
+         	</div>
+         	<div class="analytics_item span3">
+            <h1>Chlamydia heatmap</h1>
+            <div></div>
+          </div>
+          <div class="analytics_item span3">
+            <h1>Chlamydia co-infection</h1>
+            <div id="pie_chlamydia_coinfect_div" class="chart"></div>
+          </div>
+        </div>
+
+        <div class="navbar navbar-static">
+         	<center>
+         		<select class="pull-left">
+  					<option>Saved templates</option>
+  					<option>To do</option>
+  					<option>Chlamydia epi</option>
+  					<option>Syphilis</option>
+  					<option>Overview</option>
+				    </select>
+         		<a href="" class="btn">Save as template</a>
+         		<a href="" class="btn pull-right">Edit dashboard</a>
+         	</center>
+        </div>
+	</div>

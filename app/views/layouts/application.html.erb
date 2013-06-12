@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+  <title>My Test Results</title>
+  <%= stylesheet_link_tag    "bootstrap", :media => "all" %> 
+  <%= stylesheet_link_tag    "bootstrap_responsive", :media => "all" %>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "style", :media => "all" %>
+  <%= stylesheet_link_tag    "dataTabels", :media => "all" %>
+  <style type="text/css">
+      body {
+        padding-top: 40px;
+        background-color: #f5f5f5;
+      }
+
+      .content-sec {
+        max-width: 1000px;
+        min-height: 460px;
+        padding: 19px 29px 29px;
+        margin: 0 auto 20px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+      }
+      .form-signin .form-signin-heading,
+      .form-signin .checkbox {
+        margin-bottom: 10px;
+      }
+      .form-signin input[type="email"],
+      .form-signin input[type="password"] {
+        font-size: 14px;
+        height: auto;
+        margin-bottom: 15px;
+        padding: 7px 9px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .home-form {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        
+      }
+      .home-form input {
+
+      }
+      .home-form p {
+        padding: 80px 10px 40px;
+        font-size: 18px;
+        line-height: 20px;
+        max-width: 800px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      #terms {
+        height: 300px;
+        overflow-y: scroll;
+        border: 1px solid rgb(229, 229, 229);
+        margin-top: 20px;
+        margin-bottom: 25px;
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5px;
+        font-size: 12px;
+      }
+      #accept_terms {
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+        margin-bottom: 25px;
+      }
+      #accept_terms .checkbox input[type="checkbox"] {
+        float: none;
+        margin-right: 5px;
+        margin-bottom: 4px;
+      }
+      .results {
+        padding-top: 60px;
+      }
+      .summary {
+        color: #e7755e;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      .negative {
+        background-color: rgb(108, 186, 216);
+      }
+      a.accordion-toggle.negative:hover {
+        background-color: rgb(68, 150, 181);
+      }
+      .accordion-toggle.positive {
+        background-color: #e7755e;
+      }
+      a.accordion-toggle.positive:hover {
+        background-color: #d26a55;
+      }
+      .accordion-toggle.pending {
+        background-color: #b8b7b7;
+      }
+      a.pending:hover {
+        background-color: #a2a2a2;
+      }
+      
+      .STD {
+        text-transform: uppercase;
+      }
+      .result_header {
+        float: right;
+        margin-right: 12px;
+      }
+      a:hover .icon-plus {
+        opacity: .5;
+      }
+      .accordion-inner {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      .accordion-inner ul li{
+        padding-bottom: 5px;
+      }
+      .action_buttons {
+        margin-top: 20px;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+      .action_buttons a,
+      .action_buttons button {
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .this_result_summary,
+      .accordian-inner ul {
+        padding-bottom: 15px;
+      }
+      .more_info {
+        font-size: 12px;
+      }
+
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]} );
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Status', 'Percent'],
+          ['Viewed',     78],
+          ['Need to be assigned',      24],
+          ['Assigned',      20]
+        ]);
+
+        var options = {
+          'legend':'bottom',
+        };
+
+
+        var chart = new google.visualization.PieChart(document.getElementById('pie_positives_div'));
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]} );
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Status', 'Percent'],
+          ['Viewed',     100],
+          ['Not viewed',      40]
+
+        ]);
+
+        var options = {
+          'legend':'bottom',
+        };
+
+
+        var chart = new google.visualization.PieChart(document.getElementById('pie_negatives_div'));
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Date result posted', 'Negative', 'Positive'],
+          ['May 1',  100,      80],
+          ['May 15',  70,      80],
+          ['June 1',  65,       70],
+          ['June 15',  40,      50]
+        ]);
+
+        var options = {
+          'legend':'bottom',
+          'hAxis': {title: 'Date result posted'},
+          'vAxis': {title: 'Percent delivered'}
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('line_test_views_div'));
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Date tested', 'Female', 'Male'],
+          ['May 1',  30,      25],
+          ['May 15',  32,      30],
+          ['June 1',  35,       36],
+          ['June 15',  37,      50]
+        ]);
+
+        var options = {
+          'legend':'bottom',
+          'vAxis': {title: 'Percent CT positive'}
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('line_chlamydia_gender_div'));
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]} );
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['STD', 'Number'],
+          ['CT only',     100],
+          ['CT and GC',      40],
+          ['CT and TV',      40],
+          ['CT and HIV',      20],
+          ['CT, GC and TV',      10],
+          ['CT, GC and HIV',      2],
+          ['CT, TV and HIV',      2],
+          ['CT, GC, TV, and HIV',      1]
+        ]);
+
+        var options = {
+          'legend':'bottom',
+        };
+
+
+        var chart = new google.visualization.PieChart(document.getElementById('pie_chlamydia_coinfect_div'));
+        chart.draw(data, options);
+      }
+    </script>
+    
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="../assets/ico/favicon.png">
+</head>
+<body>
+
+	   <!-- NAVBAR
+    ================================================== -->
+    <div class="navbar-wrapper">
+      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+      <div class="container">
+
+        <div class="navbar navbar-inverse">
+          <div class="navbar-inner">
+            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse" id="collapse_button">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <%= link_to "My Test Results", clinics_path, class: "brand active" %>
+            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+            <div class="nav-collapse collapse">
+              <ul class="nav pull-right">
+                <li><%= link_to "About", about_path %></li>
+                <li><a href="../clinics.html#about">Contact</a></li>
+                <li><a href="../clinics.html#about">Espa&#241;ol</a></li>
+                <li><%= link_to "Login", login_path, class: "" %></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div><!-- /.navbar-inner -->
+        </div><!-- /.navbar -->
+
+      </div> <!-- /.container -->
+    </div><!-- /.navbar-wrapper -->
+
+<%= yield %>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2013 Sexual Health Innovations &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+		<!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <%= javascript_include_tag "jquery" %>
+    <%= javascript_include_tag "bootstrap_transition" %>
+    <%= javascript_include_tag "bootstrap_alert" %>
+    <%= javascript_include_tag "bootstrap_modal" %>
+    <%= javascript_include_tag "bootstrap_dropdown" %>
+    <%= javascript_include_tag "bootstrap_scrollspy" %>
+    <%= javascript_include_tag "bootstrap_tab" %>
+    <%= javascript_include_tag "bootstrap_tooltip" %>
+    <%= javascript_include_tag "bootstrap_popover" %>
+    <%= javascript_include_tag "bootstrap_button" %>
+    <%= javascript_include_tag "bootstrap_collapse" %>
+    <%= javascript_include_tag "bootstrap_carousel" %>
+    <%= javascript_include_tag "bootstrap_typeahead" %>
+    <%= javascript_include_tag "DT_bootstrap" %>
+    <%= javascript_include_tag "jquery.dataTables" %>
+    <%= javascript_include_tag "holder" %>
+    <%= javascript_include_tag "jquery.tablesorter/jquery_latest" %>
+    <%= javascript_include_tag "jquery.tablesorter/jquery.tablesorter" %>
+</body>
+</html>
+

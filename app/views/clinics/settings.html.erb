@@ -1,0 +1,44 @@
+<div class="container">
+	<div class="content-sec">
+		<div id="navbar-example" class="navbar navbar-static">
+              <div class="navbar-inner">
+                <div class="container" style="width: auto;">
+                  <ul class="nav" role="navigation">
+                    <li class="dropdown">
+                      <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Druid Clinic <b class="caret"></b></a>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://google.com">Druid</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#anotherAction">Eastern</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Both</a></li>
+                      </ul>
+                    </li>
+
+                  </ul>
+                  <ul class="nav pull-right">
+                    <li>
+                    	<%= link_to "Analytics", analytics_path, class: "", role: "button" %>
+                    </li>
+                    <li>
+                      <%= link_to "Labs", labs_path, class: "",  role: "button" %>
+                    </li>
+                    <li>
+                      <%= link_to "Settings", settings_path, class: "", style: "font-weight: bold",  role: "button" %>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+         </div> <!-- /navbar-example -->
+         <div class="settings">
+         	<ul>
+         		<li>Admin accounts <a class="pull-right btn btn-primary">Edit</a><a class="pull-right btn btn-primary">View</a></li>
+         		<li>Notifications <a class="pull-right btn btn-primary">Edit</a><a class="pull-right btn btn-primary">View</a></li>
+         		<li>Analytics dashboard and report templates <a class="pull-right btn btn-primary">Edit</a><a class="pull-right btn btn-primary">View</a></li>
+         		<li>Patient view <a class="pull-right btn btn-primary">Edit</a><a class="pull-right btn btn-primary">View</a></li>
+            <li>Phone tree <a class="pull-right btn btn-primary">Edit</a><a class="pull-right btn btn-primary">View</a></li>
+         		<li>STD and test descriptions <a class="pull-right btn btn-primary">Edit</a><a class="pull-right btn btn-primary">View</a></li>
+         		<li>Partnering clinics <a class="pull-right btn btn-primary">Edit</a><a class="pull-right btn btn-primary">View</a></li>
+         		<li>Data collection <a class="pull-right btn btn-primary">Edit</a><a class="pull-right btn btn-primary">View</a></li>
+         		<li>History <a class="pull-right btn btn-primary">View</a></li>
+         	</ul>
+         </div>
+	</div>

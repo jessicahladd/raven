@@ -1,0 +1,104 @@
+<div class="container">
+	<div class="content-sec">
+		<div id="navbar-example" class="navbar navbar-static">
+              <div class="navbar-inner">
+                <div class="container" style="width: auto;">
+                  <ul class="nav" role="navigation">
+                    <li class="dropdown">
+                      <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Druid Clinic <b class="caret"></b></a>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://google.com">Druid</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#anotherAction">Eastern</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Both</a></li>
+                      </ul>
+                    </li>
+
+                  </ul>
+                  <ul class="nav pull-right">
+                    <li>
+                    	<%= link_to "Analytics", analytics_path, class: "", role: "button" %>
+                    </li>
+                    <li>
+                      <%= link_to "Labs", labs_path, class: "", style: "font-weight: bold",  role: "button" %>
+                    </li>
+                    <li>
+                      <%= link_to "Settings", settings_path, class: "",  role: "button" %>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+         </div> <!-- /navbar-example -->
+         <div>
+         	<table class="table table-hover" id="example">
+         		<thead>
+         			<tr>
+         				<th>Patient ID <b class="caret"></b></th>
+         				<th>STD</th>
+         				<th>Result</th>
+         				<th>When posted</th>
+         				<th>Status</th>
+         			</tr>
+         		</thead>
+         		<tbody>
+         			<tr class="pending">
+         				<td>110257</td>
+         				<td>CT - throat</td>
+         				<td>Pending</td>
+         				<td>5/21/2013</td>
+         				<td>N/A</td>
+ 
+         			</tr>
+         			<tr class="info">
+         				<td>110257</td>
+         				<td>CT - cervix</td>
+         				<td>Positive</td>
+         				<td>5/21/2013</td>
+         				<td>Viewed</td>
+         			</tr>
+         			<tr class="warning">
+         				<td>110257</td>
+         				<td>GC - cervix</td>
+         				<td>Positive</td>
+         				<td>5/21/2013</td>
+         				<td>Needs to be assigned</td>
+         			</tr>
+         			<tr class="info">
+         				<td>110255</td>
+         				<td>Syphilis</td>
+         				<td>Negative</td>
+         				<td>5/02/2013</td>
+         				<td>Viewed</td>
+         			</tr>
+         			<tr class="info">
+         				<td>110255</td>
+         				<td>HIV - penis</td>
+         				<td>Negative</td>
+         				<td>5/02/2013</td>
+         				<td>Viewed</td>
+         			</tr>
+         			<tr class="error">
+         				<td>110254</td>
+         				<td>CT - penis</td>
+         				<td>Positive</td>
+         				<td>5/01/2013</td>
+         				<td>Needs to be assigned</td>
+         			</tr>
+         			<tr class="warning">
+         				<td>110254</td>
+         				<td>CT - penis</td>
+         				<td>Positive</td>
+         				<td>5/01/2013</td>
+         				<td>Assigned</td>
+         			</tr>
+         		</tbody>
+         		
+         	</table>
+         	<div class="navbar navbar-static">
+         		<center>
+         		<a href="" class="btn pull-left">Search records</a>
+         		<a href="" class="btn">More</a>
+         		<a href="" class="btn pull-right">Download .csv</a>
+         		</center>
+         	</div>
+         </div>
+	</div>
